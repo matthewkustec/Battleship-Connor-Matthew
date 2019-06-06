@@ -6,7 +6,7 @@
 
 /**
  *
- * @author Matthew
+ * @author Matthew Kustec and Connor Hanswyk
  */
 public enum CellState {
 	EMPTY, HIT, MISS, SHIP, UNKNOWN, MYSTERYSHIP

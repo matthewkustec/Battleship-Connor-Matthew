@@ -10,10 +10,22 @@ import java.util.Scanner;
 import java.util.regex.Pattern;
 import java.util.ArrayList;
 
+/**
+ * Battleship Game Culminating Project: Driver
+ * @author Matthew Kustec and Connor Hanswyk
+ *
+ */
 public class BattleshipDriver {
-    public static int playerShipLives;
+    /**
+     * Lives for player and AI to be used as Game Winning Conditions
+     */
+	public static int playerShipLives;
     public static int computerShipLives;
     
+    /**
+     * Main Method / Runs Game
+     * @param args
+     */
     public static void main(String[] args) {
 		
             // Setup constants for board size

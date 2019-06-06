@@ -17,6 +17,12 @@ public class DefenseBoard {
     private static int cols;
     private Object xrand;
 	
+    /**
+     * Defense Board 
+     * @param aRows
+     * @param aCols
+     * Creates 2D Array of Cells / Makes grid
+     */
     public DefenseBoard(int aRows, int aCols) {
         dBoard = new Cell[aRows][aCols];
         rows = aRows;
@@ -29,8 +35,9 @@ public class DefenseBoard {
     }
 	
     /**
-    * 
+    * placeShips
     * @param ships
+    * Places array of ship objects onto Defense Board
     */
     public void placeShips(Ship[] ships) {
         Random rand = new Random();
@@ -62,6 +69,9 @@ public class DefenseBoard {
 	
 	
     // display letter and number coordinates on board
+    /**
+     * Displays board
+     */
     public void display() {
         String[] letters = {"A","B","C","D","E","F","G","H","I","J"};
         System.out.println("DEFENSE BOARD");
@@ -80,6 +90,11 @@ public class DefenseBoard {
             }
     }
 
+    /**
+     * isAttacked
+     * @param ships
+     * Takes AI's target coordinate and updates Defense Board if Hit or Missed
+     */
     public void isAttacked(Ship[] ships) {
         boolean moveMade = false;
         

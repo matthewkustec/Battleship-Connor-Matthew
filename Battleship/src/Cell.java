@@ -6,23 +6,35 @@
 
 /**
  *
- * @author Matthew
+ * @author Matthew Kustec and Connor Hanswyk
  */
 public class Cell {
 private CellState state;
 	
-	
+	/**
+	 * Cell
+	 * @param cs
+	 */
 	public Cell(CellState cs) {
 		state = cs;
 		
 	}
 	
 
-	
+	/**
+	 * setState
+	 * @param cs
+	 * Sets the state of the cell
+	 */
 	public void setState (CellState cs){
 		state = cs;
 	}
 	
+	/**
+	 * CellState
+	 * @return
+	 * Gets the CellState
+	 */
 	public CellState getState() {
 		return state;
 	}

@@ -10,6 +10,11 @@
  */
 import java.util.ArrayList;
 
+/**
+ * 
+ * @author Matthew Kustec and Connor Hanswyk
+ *
+ */
 public class Ship {
     private String name;
     private int size;
@@ -17,6 +22,12 @@ public class Ship {
     private boolean isSunk;
     //private Position position;
 
+    /**
+     * Ship
+     * @param name
+     * @param size
+     * Creates Ship Object Class
+     */
     public Ship(String name, int size) {
         this.name = name;
         this.size = size;

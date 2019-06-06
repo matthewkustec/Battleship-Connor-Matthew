@@ -12,12 +12,23 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Random;
 
+/**
+ * 
+ * @author Matthew Kustec and Connor Hanswyk
+ *
+ */
 public class AttackBoard {
     private static Cell[][] aBoard;
     private int rows;
     private static int cols;
 	
     // Creates Attack Board
+    /**
+     * Attack Board
+     * @param aRows
+     * @param aCols
+     * Creates a 2D Array of Cells
+     */
     public AttackBoard(int aRows, int aCols) {
             aBoard = new Cell[aRows][aCols];
             rows = aRows;
@@ -33,6 +44,11 @@ public class AttackBoard {
     }
 
     // Places ships on Attack Board
+    /**
+     * placeShips
+     * @param ships
+     * Places ships on board
+     */
     public void placeShips(Ship[] ships) {
             Random rand = new Random();
             ArrayList<Integer> cols = new ArrayList<>();
@@ -65,6 +81,12 @@ public class AttackBoard {
     }
     
     // Takes the input of player and determines if it hits or misses the targetted ships
+    /**
+     * isAttacked
+     * @param input
+     * @param ships
+     * Attacks the AI's ships using input from player
+     */
     public void isAttacked(String input, Ship[] ships){
         String letter = input.substring(0, input.length()-1);
         String number = input.substring(input.length()-1);
@@ -98,6 +120,12 @@ public class AttackBoard {
     }
     
     // Converts input coordinate letter into number to be compared with the Attck Board
+    /**
+     * letterConversion
+     * @param letter
+     * @return
+     * Converts letter String into a number to compare on board
+     */
     public int letterConversion(String letter) {
         
         switch (letter) {
@@ -126,9 +154,15 @@ public class AttackBoard {
 		}
     }
     
-    public int numberConversion(String letter) {
+    /**
+     * numberConversion
+     * @param number
+     * @return
+     * Converts number into an int to compare with board
+     */
+    public int numberConversion(String number) {
         
-        switch (letter) {
+        switch (number) {
 		case "0":
 			return 0;
 		case "1":
@@ -155,6 +189,9 @@ public class AttackBoard {
     }
     
     // Displays the Attack Board
+    /**
+     * Displays the board
+     */
     public void display() {
         String[] letters = {"A","B","C","D","E","F","G","H","I","J"};
         System.out.println("ATTACK BOARD");
